@@ -5,4 +5,8 @@ freeze_requirements:
 		pip freeze > requirements.txt
 
 run:
-		python manage.py runserver
+		python3 manage.py runserver
+
+migrate:
+		python3 manage.py makemigrations
+		python3 manage.py migrate
