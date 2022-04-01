@@ -95,7 +95,17 @@ class Room(models.Model):
     type = models.ForeignKey('RoomType', related_name='rooms', null=True, blank=True, on_delete=models.SET_NULL)
     number = models.IntegerField()
     value = models.FloatField()
-    status = models.CharField(max_length=20, null=True, blank=True)
+    status = status = models.CharField(
+        max_length=40,
+        choices=(
+            ('avaliable', 'Disponível'),
+            ('booked', 'Reservado'),
+            ('occupied', 'Ocupado'),
+            ('in_cleaning', 'Em Limpeza'),
+            ('in_maintenance', 'Em Manutenção'),
+        ),
+        default='avaliable'
+    )
     hotel = models.ForeignKey('Hotel', related_name='rooms', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
