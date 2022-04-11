@@ -6,15 +6,11 @@ from .models import (
 )
 
 
-class CustomUserChangeForm(UserChangeForm):
-    class Meta(UserChangeForm.Meta):
-        model = User
-
-
-class CustomUserAdmin(UserAdmin):
-    form = CustomUserChangeForm
-    list_display = ('id', 'email', 'hotel', 'created_at', 'updated_at')
+class CustomUserAdmin(admin.ModelAdmin):
+    model = User
+    list_display =  ('id', 'email', 'hotel', 'created_at', 'updated_at')
     search_fields = ('id', 'email', 'hotel__id', 'hotel__name')
+    list_filter = ('id', 'email', 'hotel', 'created_at', 'updated_at')
 
 
 class AdminHotel(admin.ModelAdmin):
@@ -57,7 +53,6 @@ class AdminBooking(admin.ModelAdmin):
     model = Booking
     list_display = ('id', 'room', 'guest', 'guest_quantity', 'daily_value', 'check_in', 'start_date', 'end_date', 'created_at', 'updated_at')
     search_fields = ('id', 'room__id', 'room__type', 'room__number', 'room__value', 'room__status', 'room__hotel__id', 'room__hotel__name', 'guest__id', 'guest__first_name', 'guest__last_name', 'guest__cpf', 'guest__rg', 'guest__email', 'guest_quantity', 'daily_value', 'check_in', 'start_date', 'end_date')
-
 
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(Hotel, AdminHotel)

@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (
-    RoomViewSet, RoomTypeViewSet, BookingViewSet, GuestViewSet
+    RoomViewSet, RoomTypeViewSet, BookingViewSet, GuestViewSet, HotelViewSet, AuthLoginViewSet
 )
 
 
@@ -9,6 +9,12 @@ detail_mapping = {'get': 'retrieve', 'put': 'update', 'patch': 'partial_update',
 
 app_name = 'api'
 urlpatterns = [
+    path('auth', AuthLoginViewSet.as_view(), name='api_token_auth'),
+
+    path('hotel/user', HotelViewSet.as_view({'get': 'get_hotel_by_user'}), name='user_hotel'),
+    path('hotel', HotelViewSet.as_view(list_mapping), name='hotel_list'),
+    path('hotel/<pk>', HotelViewSet.as_view(detail_mapping), name='hotel_detail'),
+
     path('room', RoomViewSet.as_view(list_mapping), name='room_list'),
     path('room/<pk>', RoomViewSet.as_view(detail_mapping), name='room_detail'),
     path('room/<pk>/booking', RoomViewSet.as_view({'get': 'get_bookings'}), name='room_booking'),
