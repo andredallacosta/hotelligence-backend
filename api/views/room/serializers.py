@@ -32,6 +32,7 @@ class RoomSerializer(serializers.ModelSerializer):
 class RoomPopulatedSerializer(serializers.ModelSerializer):
     hotel = HotelSerializer()
     type = RoomTypeSerializer()
+    bookings = BookingSerializer(many=True)
 
     class Meta:
         model = Room

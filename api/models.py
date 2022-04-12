@@ -99,8 +99,6 @@ class Room(models.Model):
         max_length=40,
         choices=(
             ('available', 'Disponível'),
-            ('booked', 'Reservado'),
-            ('occupied', 'Ocupado'),
             ('in_cleaning', 'Em Limpeza'),
             ('in_maintenance', 'Em Manutenção'),
         ),
