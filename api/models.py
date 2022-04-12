@@ -98,7 +98,7 @@ class Room(models.Model):
     status = status = models.CharField(
         max_length=40,
         choices=(
-            ('avaliable', 'Disponível'),
+            ('available', 'Disponível'),
             ('booked', 'Reservado'),
             ('occupied', 'Ocupado'),
             ('in_cleaning', 'Em Limpeza'),
