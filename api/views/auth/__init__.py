@@ -14,7 +14,7 @@ class AuthLoginViewSet(ObtainAuthToken):
             raise TokenDoesNotExist
 
     def get(self, request, *args, **kwargs):
-        token = Token.objects.get(key=request.GET.get('token', ''))
+        token = self.get_object(request.GET.get('token', ''))
 
         return Response({
             'token': token.key,

@@ -95,7 +95,7 @@ class Room(models.Model):
     type = models.ForeignKey('RoomType', related_name='rooms', null=True, blank=True, on_delete=models.SET_NULL)
     number = models.IntegerField()
     value = models.FloatField()
-    status = status = models.CharField(
+    status = models.CharField(
         max_length=40,
         choices=(
             ('available', 'Disponível'),
@@ -144,6 +144,7 @@ class Booking(models.Model):
     extras_value = models.FloatField(null=True, blank=True)
     paid_value = models.FloatField(null=True, blank=True)
     check_in = models.BooleanField(default=False)
+    check_out = models.BooleanField(default=False)
     start_date = models.DateField()
     end_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
