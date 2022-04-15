@@ -102,7 +102,7 @@ class Room(models.Model):
             ('in_cleaning', 'Em Limpeza'),
             ('in_maintenance', 'Em Manutenção'),
         ),
-        default='avaliable'
+        default='available'
     )
     hotel = models.ForeignKey('Hotel', related_name='rooms', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
