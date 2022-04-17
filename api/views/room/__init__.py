@@ -9,7 +9,7 @@ from api.models import (
 from .serializers import (
     RoomSerializer,
     RoomPopulatedSerializer,
-    BookingSerializer,
+    BookingPopulatedSerializer,
 )
 
 
@@ -24,7 +24,7 @@ class RoomViewSet(ModelViewSet):
         if self.action == 'retrieve':
             return RoomPopulatedSerializer
         if self.action == 'get_bookings':
-            return BookingSerializer
+            return BookingPopulatedSerializer
         return RoomSerializer
 
     def list(self, request, *args, **kwargs):

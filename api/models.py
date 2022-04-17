@@ -145,8 +145,8 @@ class Booking(models.Model):
     paid_value = models.FloatField(null=True, blank=True)
     check_in = models.BooleanField(default=False)
     check_out = models.BooleanField(default=False)
-    start_date = models.DateField()
-    end_date = models.DateField()
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
