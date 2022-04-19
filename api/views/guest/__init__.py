@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 from rest_framework import status
 import copy
 
-from api.models import Guest
+from api.models import Address, Guest, Phone
 from api.exceptions import (
     CheckWithNoParam,
     GuestDoesNotExist,
@@ -35,24 +35,64 @@ class GuestViewSet(ModelViewSet):
         data = copy.deepcopy(request.data)
 
         if 'phone' in data:
-            serializer = PhoneSerializer(data=data['phone'])
+            try:
+                instance = Phone.objects.get(id=data['phone']['id'])
+                serializer = PhoneSerializer(instance, data=data['phone'])
+            except:
+                serializer = PhoneSerializer(data=data['phone'])
+
             if serializer.is_valid(raise_exception=True):
                 phone = serializer.save()
                 data['phone'] = phone.id
 
         if 'address' in data:
-            serializer = AddressSerializer(data=data['address'])
+            try:
+                instance = Address.objects.get(id=data['address']['id'])
+                serializer = AddressSerializer(instance, data=data['address'])
+            except:
+                serializer = AddressSerializer(data=data['address'])
+
             if serializer.is_valid(raise_exception=True):
                 address = serializer.save()
                 data['address'] = address.id
-
-        print('\n\n', data, '\n\n')
 
         serializer = self.get_serializer(data=data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+    def update(self, request, *args, **kwargs):
+        data = copy.deepcopy(request.data)
+
+        if 'phone' in data:
+            try:
+                instance = Phone.objects.get(id=data['phone']['id'])
+                serializer = PhoneSerializer(instance, data=data['phone'])
+            except:
+                serializer = PhoneSerializer(data=data['phone'])
+
+            if serializer.is_valid(raise_exception=True):
+                phone = serializer.save()
+                data['phone'] = phone.id
+
+        if 'address' in data:
+            try:
+                instance = Address.objects.get(id=data['address']['id'])
+                serializer = AddressSerializer(instance, data=data['address'])
+            except:
+                serializer = AddressSerializer(data=data['address'])
+
+            if serializer.is_valid(raise_exception=True):
+                address = serializer.save()
+                data['address'] = address.id
+
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
 
     @action(detail=True, methods=['post'])
     def check(self, request, format=None):
