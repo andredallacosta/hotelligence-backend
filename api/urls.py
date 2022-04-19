@@ -25,6 +25,7 @@ urlpatterns = [
     path('booking', BookingViewSet.as_view(list_mapping), name='booking_list'),
     path('booking/<pk>', BookingViewSet.as_view(detail_mapping), name='booking_detail'),
 
+    path('guest/check', GuestViewSet.as_view({'get': 'check'}), name='guest_check'),
     path('guest', GuestViewSet.as_view(list_mapping), name='guest_list'),
     path('guest/<pk>', GuestViewSet.as_view(detail_mapping), name='guest_detail'),
 ]

@@ -29,8 +29,8 @@ class GuestSerializer(serializers.ModelSerializer):
 
 class GuestPopulatedSerializer(serializers.ModelSerializer):
     full_name = serializers.SerializerMethodField()
-    phone = PhoneSerializer(many=True)
-    address = AddressSerializer(many=True)
+    phone = PhoneSerializer()
+    address = AddressSerializer()
 
     class Meta:
         model = Guest
