@@ -1,9 +1,9 @@
-# apturl
+apturl
 asgiref
 autopep8==1.6.0
 backports.zoneinfo==0.2.1
 blinker==1.4
-Brlapi==0.7.0
+Brlapi
 certifi==2019.11.28
 chardet==3.0.4
 chrome-gnome-shell==0.0.0
