@@ -48,7 +48,7 @@ psutil
 psycopg2
 pycairo
 pycodestyle
-pycups
+# pycups
 pyflakes
 # PyGObject
 PyJWT
