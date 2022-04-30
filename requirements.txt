@@ -74,7 +74,7 @@ testresources
 toml
 # ubuntu-advantage-tools
 # ubuntu-drivers-common
-ufw
+# ufw
 unattended-upgrades
 urllib3
 virtualenv
