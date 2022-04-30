@@ -75,7 +75,7 @@ toml
 # ubuntu-advantage-tools
 # ubuntu-drivers-common
 # ufw
-unattended-upgrades
+# unattended-upgrades
 urllib3
 virtualenv
 wadllib
