@@ -1,5 +1,5 @@
 # apturl
-asgiref==3.5.0
+asgiref
 autopep8==1.6.0
 backports.zoneinfo==0.2.1
 blinker==1.4
