@@ -71,7 +71,7 @@ six
 sqlparse
 systemd-python
 testresources
-toml
+# toml
 # ubuntu-advantage-tools
 # ubuntu-drivers-common
 # ufw
