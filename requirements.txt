@@ -13,7 +13,7 @@ colorama
 configobj
 cryptography
 # cupshelpers==1.0
-dbus-python
+# dbus-python
 # defer==1.0.6
 distlib
 distro
@@ -50,12 +50,12 @@ pycairo
 pycodestyle
 pycups
 pyflakes
-PyGObject
+# PyGObject
 PyJWT
 pymacaroons
 PyNaCl
 pyRFC3339
-python-apt
+# python-apt
 python-dateutil
 python-debian
 pytz
