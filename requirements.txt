@@ -72,7 +72,7 @@ sqlparse
 systemd-python
 testresources
 toml
-ubuntu-advantage-tools
+# ubuntu-advantage-tools
 ubuntu-drivers-common
 ufw
 unattended-upgrades
