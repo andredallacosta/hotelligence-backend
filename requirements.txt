@@ -81,3 +81,5 @@ virtualenv
 wadllib
 whitenoise
 # xkit
+hidapi
+cm-rgb
