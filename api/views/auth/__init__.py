@@ -30,5 +30,5 @@ class AuthLoginViewSet(ObtainAuthToken):
         return Response({
             'token': token.key,
             'id': user.pk,
-            'email': user.email
+            'email': user.email,
         })
