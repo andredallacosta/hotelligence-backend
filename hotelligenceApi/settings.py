@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'corsheaders',
     'whitenoise.runserver_nostatic',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'hotelligenceApi.urls'
@@ -147,24 +147,24 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    '0.0.0.0',
-    'localhost',
-    '127.0.0.1',
-    'hotelligence-backend.herokuapp.com'
+    'http://0.0.0.0',
+    'http://localhost',
+    'http://127.0.0.1',
+    'https://hotelligence-backend.herokuapp.com'
 ]
 CORS_ALLOWED_ORIGIN_REGEXES = [
     'http://localhost:3000',
-    '0.0.0.0',
-    'localhost',
-    '127.0.0.1',
-    'hotelligence-backend.herokuapp.com'
+    'http://0.0.0.0',
+    'http://localhost',
+    'http://127.0.0.1',
+    'https://hotelligence-backend.herokuapp.com'
 ]
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    '0.0.0.0',
-    'localhost',
-    '127.0.0.1',
-    'hotelligence-backend.herokuapp.com'
+    'http://0.0.0.0',
+    'http://localhost',
+    'http://127.0.0.1',
+    'https://hotelligence-backend.herokuapp.com'
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
