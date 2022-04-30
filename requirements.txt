@@ -64,7 +64,7 @@ PyYAML
 reportlab
 requests
 requests-unixsocket
-screen-resolution-extra
+# screen-resolution-extra
 SecretStorage
 simplejson
 six
