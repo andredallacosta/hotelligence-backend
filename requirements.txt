@@ -73,7 +73,7 @@ systemd-python
 testresources
 toml
 # ubuntu-advantage-tools
-ubuntu-drivers-common
+# ubuntu-drivers-common
 ufw
 unattended-upgrades
 urllib3
