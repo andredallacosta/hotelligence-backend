@@ -83,3 +83,6 @@ whitenoise
 # xkit
 hidapi
 cm-rgb
+pip
+setuptools
+wheel
