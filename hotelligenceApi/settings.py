@@ -150,21 +150,24 @@ CORS_ALLOWED_ORIGINS = [
     'http://0.0.0.0',
     'http://localhost',
     'http://127.0.0.1',
-    'https://hotelligence-backend.herokuapp.com'
+    'https://hotelligence-backend.herokuapp.com',
+    'https://hotelligence-frontend.herokuapp.com',
 ]
 CORS_ALLOWED_ORIGIN_REGEXES = [
     'http://localhost:3000',
     'http://0.0.0.0',
     'http://localhost',
     'http://127.0.0.1',
-    'https://hotelligence-backend.herokuapp.com'
+    'https://hotelligence-backend.herokuapp.com',
+    'https://hotelligence-frontend.herokuapp.com',
 ]
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://0.0.0.0',
     'http://localhost',
     'http://127.0.0.1',
-    'https://hotelligence-backend.herokuapp.com'
+    'https://hotelligence-backend.herokuapp.com',
+    'https://hotelligence-frontend.herokuapp.com',
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
