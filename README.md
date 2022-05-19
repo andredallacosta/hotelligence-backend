@@ -9,8 +9,11 @@ The project stack counts with Django + PostgreSQL.
 To run this project, please run this sequence of commands in terminal:
 
 `make create_env`
+
 `make activate_env`
+
 `make install_requirements`
+
 `make run`
 
 Thats it, the server will be up and running in *localhost:8000*
