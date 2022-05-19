@@ -151,7 +151,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost',
     'http://127.0.0.1',
     'https://hotelligence-backend.herokuapp.com',
-    'https://hotelligence-frontend.herokuapp.com',
+    'https://hotelligence-frontend.netlify.app',
 ]
 CORS_ALLOWED_ORIGIN_REGEXES = [
     'http://localhost:3000',
@@ -159,7 +159,7 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
     'http://localhost',
     'http://127.0.0.1',
     'https://hotelligence-backend.herokuapp.com',
-    'https://hotelligence-frontend.herokuapp.com',
+    'https://hotelligence-frontend.netlify.app',
 ]
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
@@ -167,7 +167,7 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost',
     'http://127.0.0.1',
     'https://hotelligence-backend.herokuapp.com',
-    'https://hotelligence-frontend.herokuapp.com',
+    'https://hotelligence-frontend.netlify.app',
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
