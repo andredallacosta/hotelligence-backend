@@ -4,6 +4,8 @@ This is the implementation of the backend part of Hotelligence, a hotel manageme
 
 The project stack counts with Django + PostgreSQL.
 
+The frontend project can be accessed by this [Link](https://github.com/andredallacosta/hotelligence-frontend)
+
 ## Run
 
 To run this project, please run this sequence of commands in terminal:
